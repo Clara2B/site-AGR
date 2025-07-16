@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AGR Ar Condicionado LTDA</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body> 
+
+<header class="header">
+  <div class="container header-inner">
+    <!-- LOGO -->
+    <div class="logo">
+      <img src="./logo_agr_aprimorada (1).png" alt="Logo AGR">
+    </div>
+
+    <!-- MENU DESKTOP -->
+    <nav class="nav-desktop">
+      <ul class="nav-list">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#diferenciais">Diferenciais</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+      <a class="btn-cta" href="https://wa.me/5511940011535" target="_blank">Peça um Orçamento</a>
+    </nav>
+
+            <!-- MENU HAMBÚRGUER -->
+    <div class="menu-hamburguer" onclick="toggleMenu()">
+      <span id="hamburger-icon">&#9776;</span>
+    </div>
+  </div>
+
+  <!-- MENU MOBILE (fora da header-inner) -->
+  <nav class="nav nav-mobile" id="menuMobile">
+    <ul class="nav-list-mobile">
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#servicos">Serviços</a></li>
+      <li><a href="#diferenciais">Diferenciais</a></li>
+      <li><a href="#depoimentos">Depoimentos</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+
+</header>
+
+<!--BANNER PRINCIPAL--> 
+<div class="container-principal">
+  <div class="carousel">
+    <div class="carousel-track">
+      <div class="banner-item active">
+      <img src="./imgs/banner1.png" alt="Banner 1">
+    </div>
+    <div class="banner-item">
+      <img src="./imgs/banner2.png" alt="Banner 2">
+    </div>
+    <div class="banner-item">
+      <img src="./imgs/banner3.png" alt="Banner 3">
+      <a href="#contato" class="btn-banner">Agende agora</a>
+    </div>
+    </div>
+  </div>
+    <div class="carousel-buttons">
+      <button class="btn prev">&#10094;</button>
+      <button class="btn next">&#10095;</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- SOBRE -->
+<section id="sobre" class="sobre">
+  <div class="container sobre-grid">
+    
+    <div class="sobre-img">
+      <img src="./imgs/arnasala.png" alt="Ambiente climatizado">
+    </div>
+
+    <div class="sobre-texto">
+      <h2>Especialistas em conforto e eficiência</h2>
+      <p>
+        A AGR Ar Condicionado é referência em climatização, atuando com responsabilidade, tecnologia e atendimento ágil. 
+        Nossa missão é garantir o conforto térmico com soluções inteligentes para residências e empresas. 
+        Valorizamos a confiança, agilidade e segurança em cada serviço.
+      </p>
+      
+    <div class="selo">
+      <a href="#contato" title="Fale conosco">
+        <img src="./imgs/25anos.png" alt="25 anos de experiência">
+      </a>
+    </div>
+
+
+  </div>
+</section>
+
+
+
+<!-- SERVIÇOS -->
+<section id="servicos" class="servicos">
+  <div class="container">
+    <h2 class="titulo-secao">Nossos Serviços</h2>
+    <div class="cards-servicos">
+
+      <div class="card-servico">
+       <img src="./imgs/instalação.png" alt="" class="img-servico">
+        <h3>Instalação</h3>
+        <p>Instalação profissional de sistemas de ar-condicionado, com segurança e eficiência.</p>
+      </div>
+
+      <div class="card-servico">
+        <img src="./imgs/manutenção.png" alt="" class="img-servico">
+        <h3>Manutenção</h3>
+        <p>Manutenção preventiva e corretiva para prolongar a vida útil dos equipamentos.</p>
+      </div>
+
+      <div class="card-servico">
+        <img src="./imgs/venda.png" alt="" class="img-servico">
+        <h3>Venda de Equipamentos</h3>
+        <p>Trabalhamos com as melhores marcas do mercado, oferecendo consultoria especializada.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- DIFERENCIAIS -->
+<section id="diferenciais" class="diferenciais-lista">
+  <div class="container">
+    <h2 class="titulo-secao">Por que escolher a AGR?</h2>
+
+    <ul class="lista-diferenciais">
+      <li>
+        <i class="fas fa-clock"></i>
+        <div>
+          <h3>Atendimento Rápido</h3>
+          <p>Respostas ágeis para instalação e suporte técnico.</p>
+        </div>
+      </li>
+      <li>
+        <i class="fas fa-user-shield"></i>
+        <div>
+          <h3>Técnicos Certificados</h3>
+          <p>Profissionais qualificados para qualquer tipo de serviço.</p>
+        </div>
+      </li>
+      <li>
+        <i class="fas fa-shield-alt"></i>
+        <div>
+          <h3>Garantia de Serviço</h3>
+          <p>Qualidade garantida em tudo que entregamos.</p>
+        </div>
+      </li>
+      <li>
+        <i class="fas fa-comments"></i>
+        <div>
+          <h3>Suporte Personalizado</h3>
+          <p>Atendimento humano, claro e consultivo.</p>
+        </div>
+      </li>
+      <li>
+        <i class="fas fa-leaf"></i>
+        <div>
+          <h3>Sustentabilidade</h3>
+          <p>Soluções econômicas e amigas do meio ambiente.</p>
+        </div>
+      </li>
+      <li>
+        <i class="fas fa-check-circle"></i>
+        <div>
+          <h3>Orçamento Sem Compromisso</h3>
+          <p>Você decide com total clareza e liberdade.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+
+
+<!-- DEPOIMENTOS -->
+<section id="depoimentos" class="depoimentos">
+  <div class="container">
+    <h2 class="titulo-secao">O que dizem nossos clientes</h2>
+
+    <div class="depoimentos-slider"> <!-- mudamos para slider -->
+      <div class="depoimento">
+        <i class="fas fa-quote-left"></i>
+        <p>"O atendimento foi excelente! A equipe foi pontual e super profissional na instalação."</p>
+        <footer>
+          <img class="avatar" src="./imgs/joao.jpg" alt="Foto João Silva">
+          — João Silva
+        </footer>
+      </div>
+
+      <div class="depoimento">
+        <i class="fas fa-quote-left"></i>
+        <p>"Empresa séria e comprometida. Qualidade do serviço incrível e o cuidado com os detalhes."</p>
+        <footer>
+          <img class="avatar" src="./imgs/maria.jpg" alt="Foto Maria Fernanda">
+          — Maria Fernanda
+        </footer>
+      </div>
+
+      <div class="depoimento">
+        <i class="fas fa-quote-left"></i>
+        <p>"Tive suporte do início ao fim. Com certeza recomendo!"</p>
+        <footer>
+          <img class="avatar" src="./imgs/lucas.jpg" alt="Foto Lucas Andrade">
+          — Lucas Andrade
+        </footer>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- CONTATO -->
+<section id="contato" class="contato">
+  <div class="container">
+    <h2 class="titulo-secao">Fale Conosco</h2>
+
+    <form action="https://formsubmit.co/SEUEMAILAQUI" method="POST" class="form-contato">
+      <input type="text" name="nome" placeholder="Seu nome" required>
+      <input type="email" name="email" placeholder="Seu e-mail" required>
+      <input type="tel" name="telefone" placeholder="Telefone (opcional)">
+      <textarea name="mensagem" rows="5" placeholder="Digite sua mensagem" required></textarea>
+
+      <!-- Anti-spam -->
+      <input type="hidden" name="_captcha" value="false">
+      <!-- Redirecionamento após envio -->
+      <input type="hidden" name="_next" value="https://seusite.com.br/obrigado.html">
+
+      <button type="submit" class="btn-cta">Enviar Mensagem</button>
+    </form>
+
+  <div class="contato-info">
+    <p>Ou fale direto conosco pelo WhatsApp:</p>
+    <a href="https://wa.me/5511940011535" target="_blank" class="whatsapp-link">
+    <div class="contato-info">
+      <i class="fab fa-whatsapp"></i> A.G.R Ar Condicionado LTDA
+    </a>
+</div>
+  </div>
+  </div>
+</section>
+
+
+
+  <!-- RODAPÉ -->
+<footer class="rodape">
+  <div class="container rodape-conteudo">
+
+    <div class="rodape-logo">
+      <p>AGR Ar Condicionado</p>
+    </div>
+
+    <nav class="rodape-links">
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#diferenciais">Diferenciais</a></li>
+        <li><a href="#depoimentos">Depoimentos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+
+    <div class="rodape-contato">
+      <p><i class="fas fa-envelope"></i> rodrigoagrarcondicionado@gmail.com</p>
+      <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/5511940011535" target="_blank">Fale conosco</a></p>
+    </div>
+
+    </div>
+
+<div class="rodape-copy">
+    <p>&copy; 2025 AGR Ar Condicionado. Todos os direitos reservados.</p>
+  </div>
+</footer>
+</div>
+
+
+
+<!-- Scripts -->
+<script src="java.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  // Scroll Reveal nas seções
+  const sections = ['#sobre', '#servicos', '#diferenciais', '#depoimentos', '#contato'];
+  sections.forEach(selector => {
+    const el = document.querySelector(selector);
+    if (el) el.classList.add("reveal");
+  });
+
+  // Menu Hamburguer Toggle
+  const menuBtn = document.querySelector(".menu-hamburguer");
+  const menu = document.getElementById("menuMobile");
+  const icon = document.getElementById("hamburger-icon");
+  if (menuBtn && menu && icon) {
+    menuBtn.addEventListener("click", () => {
+      menu.classList.toggle("active");
+      icon.innerHTML = menu.classList.contains("active") ? "&times;" : "&#9776;";
+    });
+
+    document.addEventListener("click", (e) => {
+      if (!menu.contains(e.target) && !menuBtn.contains(e.target)) {
+        menu.classList.remove("active");
+        icon.innerHTML = "&#9776;";
+      }
+    });
+  }
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  reveals.forEach((el, i) => {
+    if (i < 10) el.classList.add(`reveal-delay-${i % 5}`);
+    observer.observe(el);
+  });
+});
+</script>
+</body>
+</html>
+
+ 
+ 
