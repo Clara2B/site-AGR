@@ -1,26 +1,139 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AGR Ar Condicionado LTDA</title>
-  <link rel="shortcut icon" href="imgs/logo.ico" type="image/x-icon">
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- ══ SEO BÁSICO ══════════════════════════════════════════ -->
+  <title>AGR Ar Condicionado | Instalação, Manutenção e Venda em SP</title>
+  <meta name="description" content="A AGR Ar Condicionado oferece instalação, manutenção e venda de ar-condicionado em São Paulo com mais de 25 anos de experiência. Técnicos certificados, atendimento rápido e orçamento sem compromisso.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://agrcondicionado.com.br/">
+
+  <!-- ══ GOOGLE SEARCH CONSOLE ═══════════════════════════════
+       Substitua o content= pelo seu código de verificação.
+       Obtenha em: search.google.com/search-console
+  ══════════════════════════════════════════════════════════ -->
+  <meta name="google-site-verification" content="COLE_AQUI_SEU_CODIGO_DO_SEARCH_CONSOLE">
+
+  <!-- ══ OPEN GRAPH — WhatsApp · Facebook · Instagram ════════ -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://agrcondicionado.com.br/">
+  <meta property="og:title"       content="AGR Ar Condicionado | Instalação, Manutenção e Venda em SP">
+  <meta property="og:description" content="Mais de 25 anos de experiência em climatização residencial e comercial. Técnicos certificados, atendimento rápido e orçamento sem compromisso.">
+  <meta property="og:image"       content="https://agrcondicionado.com.br/imgs/banner1.webp">
+  <meta property="og:locale"      content="pt_BR">
+  <meta property="og:site_name"   content="AGR Ar Condicionado">
+
+  <!-- ══ TWITTER CARD ════════════════════════════════════════ -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="AGR Ar Condicionado | Instalação, Manutenção e Venda em SP">
+  <meta name="twitter:description" content="Mais de 25 anos de experiência em climatização residencial e comercial. Técnicos certificados e atendimento rápido.">
+  <meta name="twitter:image"       content="https://agrcondicionado.com.br/imgs/banner1.webp">
+
+  <!-- ══ FAVICON ═════════════════════════════════════════════ -->
+  <link rel="shortcut icon" href="./imgs/logo.ico" type="image/x-icon">
+
+  <!-- ══ FONTS ════════════════════════════════════════════════ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <!-- ══ ICONS ════════════════════════════════════════════════ -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- ══ CSS ══════════════════════════════════════════════════ -->
+  <link rel="stylesheet" href="./src/style.css">
+
+  <!-- ══ SCHEMA.ORG — LocalBusiness / HVACBusiness ══════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HVACBusiness",
+    "name": "AGR Ar Condicionado LTDA",
+    "description": "Empresa especializada em instalação, manutenção preventiva/corretiva e venda de ar-condicionado em São Paulo. Mais de 25 anos de experiência, técnicos certificados e orçamento sem compromisso.",
+    "url": "https://agrcondicionado.com.br",
+    "logo": "https://agrcondicionado.com.br/imgs/logo.ico",
+    "image": "https://agrcondicionado.com.br/imgs/banner1.webp",
+    "telephone": "+55-11-94001-1535",
+    "email": "rodrigoagrarcondicionado@gmail.com",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "PREENCHER_ENDERECO",
+      "addressLocality": "São Paulo",
+      "addressRegion": "SP",
+      "postalCode": "PREENCHER_CEP",
+      "addressCountry": "BR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "PREENCHER_LATITUDE",
+      "longitude": "PREENCHER_LONGITUDE"
+    },
+    "areaServed": {
+      "@type": "State",
+      "name": "São Paulo"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "08:00",
+        "closes": "18:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday"],
+        "opens": "08:00",
+        "closes": "12:00"
+      }
+    ],
+    "sameAs": [
+      "PREENCHER_LINK_INSTAGRAM",
+      "PREENCHER_LINK_FACEBOOK",
+      "PREENCHER_LINK_GOOGLE_NEGOCIOS"
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Serviços de Ar-Condicionado",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Instalação de Ar-Condicionado" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Manutenção Preventiva e Corretiva" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Venda de Equipamentos de Ar-Condicionado" } }
+      ]
+    }
+  }
+  </script>
+
+  <!-- ══ GOOGLE ANALYTICS GA4 ════════════════════════════════
+       Substitua G-XXXXXXXXXX pelo seu Measurement ID.
+       Obtenha em: analytics.google.com
+  ══════════════════════════════════════════════════════════ -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script> -->
 </head>
 
-<body> 
+<body>
 
+<!-- ══════════════════════════════════════════
+     HEADER
+════════════════════════════════════════════ -->
 <header class="header">
   <div class="container header-inner">
-    <!-- LOGO -->
-    <div class="logo">
-      <img src="./logo_agr_aprimorada (1).png" alt="Logo AGR">
-    </div>
 
-    <!-- MENU DESKTOP -->
-    <nav class="nav-desktop">
+    <!-- Logo -->
+    <a href="#" class="logo" aria-label="AGR Ar Condicionado — página inicial">
+      <img src="./imgs/logo_agr_aprimorada (1).png" alt="Logotipo AGR Ar Condicionado">
+    </a>
+
+    <!-- Nav Desktop -->
+    <nav class="nav-desktop" aria-label="Menu principal">
       <ul class="nav-list">
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#servicos">Serviços</a></li>
@@ -28,17 +141,35 @@
         <li><a href="#depoimentos">Depoimentos</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
-      <a class="btn-cta" href="https://wa.me/5511940011535" target="_blank">Peça um Orçamento</a>
+      <a class="btn-nav-cta" href="https://wa.me/5511940011535" target="_blank" rel="noopener noreferrer">
+        Peça um Orçamento
+      </a>
     </nav>
 
-            <!-- MENU HAMBÚRGUER -->
-    <div class="menu-hamburguer" onclick="toggleMenu()">
-      <span id="hamburger-icon">&#9776;</span>
-    </div>
+    <!-- Toggle de Tema -->
+    <button
+      id="themeToggle"
+      class="theme-toggle"
+      aria-label="Ativar tema escuro"
+    >
+      <i id="themeIcon" class="fas fa-moon" aria-hidden="true"></i>
+    </button>
+
+    <!-- Hambúrguer -->
+    <button
+      id="btnHamburguer"
+      class="menu-hamburguer"
+      aria-label="Abrir menu de navegação"
+      aria-expanded="false"
+      aria-controls="menuMobile"
+    >
+      <span id="hamburger-icon" aria-hidden="true">&#9776;</span>
+    </button>
+
   </div>
 
-  <!-- MENU MOBILE (fora da header-inner) -->
-  <nav class="nav nav-mobile" id="menuMobile">
+  <!-- Menu Mobile -->
+  <nav class="nav-mobile" id="menuMobile" aria-label="Menu mobile" aria-hidden="true">
     <ul class="nav-list-mobile">
       <li><a href="#sobre">Sobre</a></li>
       <li><a href="#servicos">Serviços</a></li>
@@ -46,137 +177,192 @@
       <li><a href="#depoimentos">Depoimentos</a></li>
       <li><a href="#contato">Contato</a></li>
     </ul>
+    <a
+      class="btn-mobile-cta"
+      href="https://wa.me/5511940011535"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Pedir orçamento no WhatsApp"
+    >
+      Peça um Orçamento
+    </a>
   </nav>
-
 </header>
 
-<!--BANNER PRINCIPAL--> 
-<div class="container-principal">
-  <div class="carousel">
+
+<!-- ══════════════════════════════════════════
+     CARROSSEL
+════════════════════════════════════════════ -->
+<div class="carousel-wrapper" aria-label="Banners principais">
+  <div class="carousel" role="region" aria-roledescription="carrossel" aria-live="polite">
     <div class="carousel-track">
-      <div class="banner-item active">
-      <img src="./imgs/banner1.png" alt="Banner 1">
-    </div>
-    <div class="banner-item">
-      <img src="./imgs/banner2.png" alt="Banner 2">
-    </div>
-    <div class="banner-item">
-      <img src="./imgs/banner3.png" alt="Banner 3">
-      <a href="#contato" class="btn-banner">Agende agora</a>
-    </div>
+
+      <!-- Slide 1 — sem lazy: está acima da dobra -->
+      <div class="banner-item active" role="group" aria-roledescription="slide" aria-label="Slide 1 de 3">
+        <picture>
+          <source srcset="./imgs/banner1.webp" type="image/webp">
+          <img src="./imgs/banner1.png" alt="Ar-condicionado instalado em ambiente residencial moderno">
+        </picture>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="banner-item" role="group" aria-roledescription="slide" aria-label="Slide 2 de 3">
+        <picture>
+          <source srcset="./imgs/banner2.webp" type="image/webp">
+          <img src="./imgs/banner2.png" alt="Técnico AGR realizando manutenção em ar-condicionado" loading="lazy">
+        </picture>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="banner-item" role="group" aria-roledescription="slide" aria-label="Slide 3 de 3">
+        <picture>
+          <source srcset="./imgs/banner3.webp" type="image/webp">
+          <img src="./imgs/banner3.png" alt="Equipamentos de ar-condicionado disponíveis para venda" loading="lazy">
+        </picture>
+        <a href="#contato" class="btn-banner">Agende agora</a>
+      </div>
+
     </div>
   </div>
-    <div class="carousel-buttons">
-      <button class="btn prev">&#10094;</button>
-      <button class="btn next">&#10095;</button>
-    </div>
+
+  <div class="carousel-buttons">
+    <button class="btn-carousel prev" aria-label="Slide anterior">&#10094;</button>
+    <button class="btn-carousel next" aria-label="Próximo slide">&#10095;</button>
+  </div>
+
+  <div class="carousel-indicators" role="tablist" aria-label="Navegação dos slides">
+    <button role="tab" aria-selected="true"  aria-label="Ir para slide 1" class="active"></button>
+    <button role="tab" aria-selected="false" aria-label="Ir para slide 2"></button>
+    <button role="tab" aria-selected="false" aria-label="Ir para slide 3"></button>
   </div>
 </div>
 
 
-
-
-<!-- SOBRE -->
-<section id="sobre" class="sobre">
+<!-- ══════════════════════════════════════════
+     SOBRE NÓS
+════════════════════════════════════════════ -->
+<section id="sobre" class="sobre reveal">
   <div class="container sobre-grid">
-    
+
     <div class="sobre-img">
-      <img src="./imgs/arnasala.png" alt="Ambiente climatizado">
+      <picture>
+        <source srcset="./imgs/arnasala.webp" type="image/webp">
+        <img
+          src="./imgs/arnasala.png"
+          alt="Ambiente residencial climatizado com ar-condicionado AGR"
+          loading="lazy"
+        >
+      </picture>
     </div>
 
     <div class="sobre-texto">
       <h2>Especialistas em conforto e eficiência</h2>
       <p>
-        A AGR Ar Condicionado é referência em climatização, atuando com responsabilidade, tecnologia e atendimento ágil. 
-        Nossa missão é garantir o conforto térmico com soluções inteligentes para residências e empresas. 
-        Valorizamos a confiança, agilidade e segurança em cada serviço.
+        A AGR Ar Condicionado é referência em climatização, atuando com responsabilidade,
+        tecnologia e atendimento ágil. Nossa missão é garantir o conforto térmico com soluções
+        inteligentes para residências e empresas. Valorizamos a confiança, agilidade e segurança
+        em cada serviço.
       </p>
-      
-    <div class="selo">
-      <a href="#contato" title="Fale conosco">
-        <img src="./imgs/25anos.png" alt="25 anos de experiência">
-      </a>
-    </div>
 
+      <div class="selo">
+        <a href="#contato" title="Fale conosco e peça seu orçamento">
+          <picture>
+            <source srcset="./imgs/25anos.webp" type="image/webp">
+            <img src="./imgs/25anos.png" alt="Selo de 25 anos de experiência em ar-condicionado" loading="lazy">
+          </picture>
+        </a>
+      </div>
+    </div>
 
   </div>
 </section>
 
 
-
-<!-- SERVIÇOS -->
-<section id="servicos" class="servicos">
+<!-- ══════════════════════════════════════════
+     SERVIÇOS
+════════════════════════════════════════════ -->
+<section id="servicos" class="servicos reveal reveal-delay-1">
   <div class="container">
     <h2 class="titulo-secao">Nossos Serviços</h2>
     <div class="cards-servicos">
 
-      <div class="card-servico">
-       <img src="./imgs/instalação.png" alt="" class="img-servico">
+      <article class="card-servico">
+        <picture>
+          <source srcset="./imgs/instalação.webp" type="image/webp">
+          <img src="./imgs/instalação.png" alt="Técnico realizando instalação de ar-condicionado" class="img-servico" loading="lazy">
+        </picture>
         <h3>Instalação</h3>
         <p>Instalação profissional de sistemas de ar-condicionado, com segurança e eficiência.</p>
-      </div>
+      </article>
 
-      <div class="card-servico">
-        <img src="./imgs/manutenção.png" alt="" class="img-servico">
+      <article class="card-servico">
+        <picture>
+          <source srcset="./imgs/manutenção.webp" type="image/webp">
+          <img src="./imgs/manutenção.png" alt="Manutenção preventiva de ar-condicionado" class="img-servico" loading="lazy">
+        </picture>
         <h3>Manutenção</h3>
         <p>Manutenção preventiva e corretiva para prolongar a vida útil dos equipamentos.</p>
-      </div>
+      </article>
 
-      <div class="card-servico">
-        <img src="./imgs/venda.png" alt="" class="img-servico">
+      <article class="card-servico">
+        <picture>
+          <source srcset="./imgs/venda.webp" type="image/webp">
+          <img src="./imgs/venda.png" alt="Equipamentos de ar-condicionado disponíveis para compra" class="img-servico" loading="lazy">
+        </picture>
         <h3>Venda de Equipamentos</h3>
         <p>Trabalhamos com as melhores marcas do mercado, oferecendo consultoria especializada.</p>
-      </div>
+      </article>
 
     </div>
   </div>
 </section>
 
 
-
-<!-- DIFERENCIAIS -->
-<section id="diferenciais" class="diferenciais-lista">
+<!-- ══════════════════════════════════════════
+     DIFERENCIAIS
+════════════════════════════════════════════ -->
+<section id="diferenciais" class="diferenciais-lista reveal reveal-delay-2">
   <div class="container">
     <h2 class="titulo-secao">Por que escolher a AGR?</h2>
 
     <ul class="lista-diferenciais">
       <li>
-        <i class="fas fa-clock"></i>
+        <span class="icon-wrap" aria-hidden="true"><i class="fas fa-clock"></i></span>
         <div>
           <h3>Atendimento Rápido</h3>
           <p>Respostas ágeis para instalação e suporte técnico.</p>
         </div>
       </li>
       <li>
-        <i class="fas fa-user-shield"></i>
+        <span class="icon-wrap" aria-hidden="true"><i class="fas fa-user-shield"></i></span>
         <div>
           <h3>Técnicos Certificados</h3>
           <p>Profissionais qualificados para qualquer tipo de serviço.</p>
         </div>
       </li>
       <li>
-        <i class="fas fa-shield-alt"></i>
+        <span class="icon-wrap" aria-hidden="true"><i class="fas fa-shield-alt"></i></span>
         <div>
           <h3>Garantia de Serviço</h3>
           <p>Qualidade garantida em tudo que entregamos.</p>
         </div>
       </li>
       <li>
-        <i class="fas fa-comments"></i>
+        <span class="icon-wrap" aria-hidden="true"><i class="fas fa-comments"></i></span>
         <div>
           <h3>Suporte Personalizado</h3>
           <p>Atendimento humano, claro e consultivo.</p>
         </div>
       </li>
       <li>
-        <i class="fas fa-leaf"></i>
+        <span class="icon-wrap" aria-hidden="true"><i class="fas fa-leaf"></i></span>
         <div>
           <h3>Sustentabilidade</h3>
           <p>Soluções econômicas e amigas do meio ambiente.</p>
         </div>
       </li>
       <li>
-        <i class="fas fa-check-circle"></i>
+        <span class="icon-wrap" aria-hidden="true"><i class="fas fa-check-circle"></i></span>
         <div>
           <h3>Orçamento Sem Compromisso</h3>
           <p>Você decide com total clareza e liberdade.</p>
@@ -187,86 +373,145 @@
 </section>
 
 
-
-<!-- DEPOIMENTOS -->
-<section id="depoimentos" class="depoimentos">
+<!-- ══════════════════════════════════════════
+     DEPOIMENTOS
+════════════════════════════════════════════ -->
+<section id="depoimentos" class="depoimentos reveal reveal-delay-3">
   <div class="container">
     <h2 class="titulo-secao">O que dizem nossos clientes</h2>
 
-    <div class="depoimentos-slider"> <!-- mudamos para slider -->
-      <div class="depoimento">
-        <i class="fas fa-quote-left"></i>
+    <div class="depoimentos-slider" aria-live="polite" aria-label="Depoimentos de clientes">
+
+      <div class="depoimento active" role="group" aria-label="Depoimento de João Silva">
+        <span class="quote-icon" aria-hidden="true"><i class="fas fa-quote-left"></i></span>
+        <span class="stars" aria-label="5 estrelas">★★★★★</span>
         <p>"O atendimento foi excelente! A equipe foi pontual e super profissional na instalação."</p>
         <footer>
-          <img class="avatar" src="./imgs/joao.jpg" alt="Foto João Silva">
-          — João Silva
+          <img class="avatar" src="./imgs/joao.jpg" alt="Foto de João Silva" loading="lazy">
+          <span>— João Silva</span>
         </footer>
       </div>
 
-      <div class="depoimento">
-        <i class="fas fa-quote-left"></i>
+      <div class="depoimento" role="group" aria-label="Depoimento de Maria Fernanda">
+        <span class="quote-icon" aria-hidden="true"><i class="fas fa-quote-left"></i></span>
+        <span class="stars" aria-label="5 estrelas">★★★★★</span>
         <p>"Empresa séria e comprometida. Qualidade do serviço incrível e o cuidado com os detalhes."</p>
         <footer>
-          <img class="avatar" src="./imgs/maria.jpg" alt="Foto Maria Fernanda">
-          — Maria Fernanda
+          <img class="avatar" src="./imgs/maria.jpg" alt="Foto de Maria Fernanda" loading="lazy">
+          <span>— Maria Fernanda</span>
         </footer>
       </div>
 
-      <div class="depoimento">
-        <i class="fas fa-quote-left"></i>
+      <div class="depoimento" role="group" aria-label="Depoimento de Lucas Andrade">
+        <span class="quote-icon" aria-hidden="true"><i class="fas fa-quote-left"></i></span>
+        <span class="stars" aria-label="5 estrelas">★★★★★</span>
         <p>"Tive suporte do início ao fim. Com certeza recomendo!"</p>
         <footer>
-          <img class="avatar" src="./imgs/lucas.jpg" alt="Foto Lucas Andrade">
-          — Lucas Andrade
+          <img class="avatar" src="./imgs/lucas.jpg" alt="Foto de Lucas Andrade" loading="lazy">
+          <span>— Lucas Andrade</span>
         </footer>
       </div>
+
     </div>
   </div>
 </section>
 
 
-
-  <!-- CONTATO -->
-<section id="contato" class="contato">
+<!-- ══════════════════════════════════════════
+     CONTATO
+════════════════════════════════════════════ -->
+<section id="contato" class="contato reveal reveal-delay-4">
   <div class="container">
     <h2 class="titulo-secao">Fale Conosco</h2>
 
-    <form action="https://formsubmit.co/SEUEMAILAQUI" method="POST" class="form-contato">
-      <input type="text" name="nome" placeholder="Seu nome" required>
-      <input type="email" name="email" placeholder="Seu e-mail" required>
-      <input type="tel" name="telefone" placeholder="Telefone (opcional)">
-      <textarea name="mensagem" rows="5" placeholder="Digite sua mensagem" required></textarea>
+    <div class="contato-grid">
 
-      <!-- Anti-spam -->
-      <input type="hidden" name="_captcha" value="false">
-      <!-- Redirecionamento após envio -->
-      <input type="hidden" name="_next" value="https://seusite.com.br/obrigado.html">
+      <!-- Coluna de informações -->
+      <div class="contato-info-col">
+        <h3>Entre em contato</h3>
+        <p>
+          Atendemos toda a região de São Paulo. Fale conosco pelo formulário ou diretamente
+          pelo WhatsApp para um orçamento rápido e sem compromisso.
+        </p>
 
-      <button type="submit" class="btn-cta">Enviar Mensagem</button>
-    </form>
+        <div class="info-item">
+          <i class="fas fa-envelope" aria-hidden="true"></i>
+          <span>rodrigoagrarcondicionado@gmail.com</span>
+        </div>
 
-  <div class="contato-info">
-    <p>Ou fale direto conosco pelo WhatsApp:</p>
-    <a href="https://wa.me/5511940011535" target="_blank" class="whatsapp-link">
-    <div class="contato-info">
-      <i class="fab fa-whatsapp"></i> A.G.R Ar Condicionado LTDA
-    </a>
-</div>
-  </div>
+        <div class="info-item">
+          <i class="fas fa-phone" aria-hidden="true"></i>
+          <a href="tel:+5511940011535">(11) 94001-1535</a>
+        </div>
+
+        <div class="info-item">
+          <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+          <span>São Paulo – SP</span>
+        </div>
+
+        <a
+          href="https://wa.me/5511940011535"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="whatsapp-link"
+          aria-label="Conversar no WhatsApp com a AGR Ar Condicionado"
+        >
+          <i class="fab fa-whatsapp" aria-hidden="true"></i>
+          Falar no WhatsApp
+        </a>
+      </div>
+
+      <!-- Formulário -->
+      <form
+        action="https://formsubmit.co/rodrigoagrarcondicionado@gmail.com"
+        method="POST"
+        class="form-contato"
+        aria-label="Formulário de contato"
+      >
+        <input type="hidden" name="_captcha"  value="false">
+        <input type="hidden" name="_next"     value="https://agrcondicionado.com.br/obrigado.html">
+        <input type="hidden" name="_subject"  value="Novo contato pelo site AGR">
+
+        <label>
+          Nome *
+          <input type="text"  name="nome"     placeholder="Seu nome completo"       required autocomplete="name">
+        </label>
+        <label>
+          E-mail *
+          <input type="email" name="email"    placeholder="seuemail@exemplo.com"    required autocomplete="email">
+        </label>
+        <label>
+          Telefone / WhatsApp
+          <input type="tel"   name="telefone" placeholder="(11) 90000-0000"                  autocomplete="tel">
+        </label>
+        <label>
+          Mensagem *
+          <textarea name="mensagem" rows="5"  placeholder="Descreva o que você precisa..." required></textarea>
+        </label>
+
+        <button type="submit" class="btn-submit">Enviar Mensagem</button>
+      </form>
+
+    </div>
   </div>
 </section>
 
 
-
-  <!-- RODAPÉ -->
+<!-- ══════════════════════════════════════════
+     RODAPÉ
+════════════════════════════════════════════ -->
 <footer class="rodape">
   <div class="container rodape-conteudo">
 
     <div class="rodape-logo">
       <p>AGR Ar Condicionado</p>
+      <span class="rodape-desc">
+        Especialistas em climatização há mais de 25 anos. Conforto térmico com tecnologia e responsabilidade.
+      </span>
     </div>
 
-    <nav class="rodape-links">
+    <nav class="rodape-links" aria-label="Links do rodapé">
+      <h4>Navegação</h4>
       <ul>
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#servicos">Serviços</a></li>
@@ -276,69 +521,28 @@
       </ul>
     </nav>
 
-    <div class="rodape-contato">
-      <p><i class="fas fa-envelope"></i> rodrigoagrarcondicionado@gmail.com</p>
-      <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/5511940011535" target="_blank">Fale conosco</a></p>
-    </div>
+    <address class="rodape-contato">
+      <h4>Contato</h4>
+      <p><i class="fas fa-envelope" aria-hidden="true"></i> rodrigoagrarcondicionado@gmail.com</p>
+      <p>
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+        <a href="https://wa.me/5511940011535" target="_blank" rel="noopener noreferrer">
+          (11) 94001-1535
+        </a>
+      </p>
+      <p><i class="fas fa-map-marker-alt" aria-hidden="true"></i> São Paulo – SP</p>
+    </address>
 
-    </div>
+  </div>
 
-<div class="rodape-copy">
-    <p>&copy; 2025 AGR Ar Condicionado. Todos os direitos reservados.</p>
+  <div class="rodape-copy">
+    <p>&copy; 2025 AGR Ar Condicionado LTDA. Todos os direitos reservados.</p>
   </div>
 </footer>
-</div>
 
 
+<!-- ══ SCRIPTS ══════════════════════════════════════════════ -->
+<script type="module" src="./src/main.js"></script>
 
-<!-- Scripts -->
-<script src="java.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  // Scroll Reveal nas seções
-  const sections = ['#sobre', '#servicos', '#diferenciais', '#depoimentos', '#contato'];
-  sections.forEach(selector => {
-    const el = document.querySelector(selector);
-    if (el) el.classList.add("reveal");
-  });
-
-  // Menu Hamburguer Toggle
-  const menuBtn = document.querySelector(".menu-hamburguer");
-  const menu = document.getElementById("menuMobile");
-  const icon = document.getElementById("hamburger-icon");
-  if (menuBtn && menu && icon) {
-    menuBtn.addEventListener("click", () => {
-      menu.classList.toggle("active");
-      icon.innerHTML = menu.classList.contains("active") ? "&times;" : "&#9776;";
-    });
-
-    document.addEventListener("click", (e) => {
-      if (!menu.contains(e.target) && !menuBtn.contains(e.target)) {
-        menu.classList.remove("active");
-        icon.innerHTML = "&#9776;";
-      }
-    });
-  }
-
-  // Scroll reveal
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('active');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.2 });
-
-  reveals.forEach((el, i) => {
-    if (i < 10) el.classList.add(`reveal-delay-${i % 5}`);
-    observer.observe(el);
-  });
-});
-</script>
 </body>
 </html>
-
- 
- 

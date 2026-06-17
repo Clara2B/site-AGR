@@ -1,0 +1,1035 @@
+/* ============================================================
+   AGR Ar Condicionado — style.css
+   Design: Premium Preto · Chumbo · Amarelo  |  Dark + Light
+   ============================================================ */
+
+/* ── 1. CSS VARIABLES ──────────────────────────────────────── */
+:root {
+  /* Tema Claro */
+  --bg-primary:      #f2f2f2;
+  --bg-secondary:    #ffffff;
+  --bg-card:         #ffffff;
+  --bg-alt:          #e8e8e8;
+
+  --text-primary:    #1a1a1a;
+  --text-secondary:  #555555;
+  --text-muted:      #888888;
+
+  --accent:          #ffcc00;
+  --accent-dark:     #e6b800;
+  --accent-text:     #111111;
+
+  --header-bg:       #1a1a1a;
+  --header-text:     #f0f0f0;
+  --header-link:     #cccccc;
+
+  --border:          #e0e0e0;
+  --border-strong:   #cccccc;
+
+  --card-shadow:     0 4px 20px rgba(0,0,0,0.07);
+  --card-shadow-h:   0 12px 36px rgba(0,0,0,0.14);
+
+  --input-bg:        #ffffff;
+  --input-border:    #cccccc;
+
+  --section-dark-bg: #1a1a1a;
+  --section-dark-tx: #f0f0f0;
+
+  --footer-bg:       #111111;
+  --footer-tx:       #aaaaaa;
+
+  --transition:      0.3s ease;
+}
+
+[data-theme="dark"] {
+  --bg-primary:      #111111;
+  --bg-secondary:    #1a1a1a;
+  --bg-card:         #202020;
+  --bg-alt:          #161616;
+
+  --text-primary:    #e8e8e8;
+  --text-secondary:  #aaaaaa;
+  --text-muted:      #666666;
+
+  --accent:          #ffcc00;
+  --accent-dark:     #e6b800;
+  --accent-text:     #111111;
+
+  --header-bg:       #0d0d0d;
+  --header-text:     #e8e8e8;
+  --header-link:     #bbbbbb;
+
+  --border:          #2e2e2e;
+  --border-strong:   #3e3e3e;
+
+  --card-shadow:     0 4px 20px rgba(0,0,0,0.45);
+  --card-shadow-h:   0 12px 36px rgba(0,0,0,0.65);
+
+  --input-bg:        #252525;
+  --input-border:    #3a3a3a;
+
+  --section-dark-bg: #0d0d0d;
+  --section-dark-tx: #e8e8e8;
+
+  --footer-bg:       #080808;
+  --footer-tx:       #777777;
+}
+
+/* ── 2. RESET ───────────────────────────────────────────────── */
+*,
+*::before,
+*::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body { overflow-x: hidden; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+  transition: background-color var(--transition), color var(--transition);
+}
+
+a { text-decoration: none; color: inherit; }
+
+img { display: block; max-width: 100%; }
+
+/* ── 3. UTILITÁRIOS ─────────────────────────────────────────── */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+h1, h2, h3, h4 { font-family: 'Poppins', sans-serif; line-height: 1.3; }
+
+/* Título de seção com traço amarelo centralizado */
+.titulo-secao {
+  font-size: 2rem;
+  color: var(--text-primary);
+  margin-bottom: 48px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 18px;
+}
+
+.titulo-secao::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 56px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+/* ── 4. LOGO ────────────────────────────────────────────────── */
+.logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  gap: 10px;
+}
+
+.logo img {
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 10%;
+  transition: transform var(--transition);
+}
+
+.logo img:hover { transform: scale(1.06); }
+
+.logo-text {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--accent);
+  line-height: 1.2;
+  display: none; /* visível apenas se quiser adicionar nome ao lado da logo */
+}
+
+/* ── 5. HEADER ──────────────────────────────────────────────── */
+.header {
+  background-color: var(--header-bg);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+  transition: background-color var(--transition);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  height: 62px;
+  padding: 0 20px;
+}
+
+/* ── 6. NAV DESKTOP ─────────────────────────────────────────── */
+.nav-desktop {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-right: 16px;
+}
+
+.nav-list li a {
+  color: var(--header-link);
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: color var(--transition), background var(--transition);
+}
+
+.nav-list li a:hover {
+  color: var(--accent);
+  background: rgba(255,204,0,0.08);
+}
+
+/* Botão CTA da navbar */
+.btn-nav-cta {
+  padding: 8px 18px;
+  background: var(--accent);
+  color: var(--accent-text);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  border-radius: 6px;
+  white-space: nowrap;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.btn-nav-cta:hover {
+  background: var(--accent-dark);
+  transform: translateY(-1px);
+}
+
+/* ── 7. TOGGLE DE TEMA ──────────────────────────────────────── */
+.theme-toggle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255,255,255,0.2);
+  background: transparent;
+  color: var(--header-text);
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition), border-color var(--transition), color var(--transition);
+  flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #111;
+}
+
+/* ── 8. MENU HAMBÚRGUER ─────────────────────────────────────── */
+.menu-hamburguer {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--header-text);
+  font-size: 22px;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+  transition: background var(--transition);
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.menu-hamburguer:hover { background: rgba(255,255,255,0.1); }
+
+/* ── 9. MENU MOBILE ─────────────────────────────────────────── */
+.nav-mobile {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  background: var(--header-bg);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+  z-index: 99;
+}
+
+.nav-mobile.active { display: block; }
+
+.nav-list-mobile {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-list-mobile li a {
+  display: block;
+  padding: 14px 24px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--header-link);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  transition: color var(--transition), background var(--transition);
+}
+
+.nav-list-mobile li a:hover {
+  color: var(--accent);
+  background: rgba(255,204,0,0.06);
+}
+
+.nav-mobile .btn-mobile-cta {
+  display: block;
+  margin: 16px 24px;
+  padding: 12px;
+  background: var(--accent);
+  color: #111;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* ── 10. CARROSSEL ──────────────────────────────────────────── */
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  background: #000;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+}
+
+.carousel-track { position: relative; width: 100%; height: 100%; }
+
+.banner-item {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  z-index: 0;
+  transition: opacity 0.7s ease-in-out;
+}
+
+.banner-item.active { opacity: 1; z-index: 1; }
+
+.banner-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Gradiente escuro na base dos banners para legibilidade */
+.banner-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.45) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* Botão "Agende agora" sobre banner */
+.btn-banner {
+  position: absolute;
+  bottom: 52px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 28px;
+  background: var(--accent);
+  color: #111;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: 8px;
+  white-space: nowrap;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  z-index: 2;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.btn-banner:hover {
+  background: var(--accent-dark);
+  transform: translateX(-50%) translateY(-2px);
+}
+
+/* Setas prev/next */
+.carousel-buttons {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  z-index: 3;
+  pointer-events: none;
+  padding: 0 12px;
+}
+
+.btn-carousel {
+  pointer-events: all;
+  background: rgba(0,0,0,0.55);
+  border: 1.5px solid rgba(255,255,255,0.15);
+  color: #fff;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition), border-color var(--transition), transform 0.15s;
+}
+
+.btn-carousel:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #111;
+}
+
+.btn-carousel.clicked { transform: scale(1.12); }
+
+/* Bolinhas indicadoras */
+.carousel-indicators {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 4;
+}
+
+.carousel-indicators button {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  background: rgba(255,255,255,0.4);
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+}
+
+.carousel-indicators button.active {
+  background: var(--accent);
+  transform: scale(1.3);
+}
+
+/* ── 11. SOBRE ──────────────────────────────────────────────── */
+.sobre {
+  padding: 80px 20px;
+  background-color: var(--bg-secondary);
+  transition: background-color var(--transition);
+}
+
+.sobre-grid {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.sobre-img {
+  flex: 1 1 340px;
+}
+
+.sobre-img img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 16px;
+  box-shadow: var(--card-shadow);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.sobre-img img:hover {
+  transform: scale(1.02);
+  box-shadow: var(--card-shadow-h);
+}
+
+.sobre-texto {
+  flex: 1 1 340px;
+  max-width: 560px;
+}
+
+.sobre-texto h2 {
+  font-size: 2rem;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+  padding-left: 18px;
+  position: relative;
+}
+
+.sobre-texto h2::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 4px;
+  bottom: 4px;
+  width: 4px;
+  background: var(--accent);
+  border-radius: 3px;
+}
+
+.sobre-texto p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+}
+
+.selo {
+  margin-top: 28px;
+  display: inline-block;
+}
+
+.selo img {
+  width: 110px;
+  height: auto;
+  transition: transform 0.25s ease;
+  cursor: pointer;
+}
+
+.selo img:hover { transform: scale(1.1) rotate(-2deg); }
+
+/* ── 12. SERVIÇOS ───────────────────────────────────────────── */
+.servicos {
+  padding: 80px 20px;
+  background-color: var(--bg-primary);
+  text-align: center;
+  transition: background-color var(--transition);
+}
+
+.cards-servicos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 28px;
+}
+
+.card-servico {
+  background: var(--bg-card);
+  border-radius: 14px;
+  padding: 32px 24px 28px;
+  width: 100%;
+  max-width: 320px;
+  box-shadow: var(--card-shadow);
+  border-top: 3px solid transparent;
+  transition: transform var(--transition), box-shadow var(--transition),
+              border-top-color var(--transition), background-color var(--transition);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card-servico:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--card-shadow-h);
+  border-top-color: var(--accent);
+}
+
+.img-servico {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+}
+
+.card-servico h3 {
+  font-size: 1.15rem;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+}
+
+.card-servico p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* ── 13. DIFERENCIAIS ───────────────────────────────────────── */
+.diferenciais-lista {
+  padding: 80px 20px;
+  background-color: var(--bg-alt);
+  transition: background-color var(--transition);
+}
+
+.lista-diferenciais {
+  list-style: none;
+  margin-top: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.lista-diferenciais li {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  background: var(--bg-card);
+  padding: 22px 20px;
+  border-radius: 12px;
+  box-shadow: var(--card-shadow);
+  border-left: 3px solid transparent;
+  transition: transform var(--transition), box-shadow var(--transition),
+              border-left-color var(--transition), background-color var(--transition);
+}
+
+.lista-diferenciais li:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--card-shadow-h);
+  border-left-color: var(--accent);
+}
+
+/* Ícone em círculo amarelo */
+.lista-diferenciais .icon-wrap {
+  width: 46px;
+  height: 46px;
+  min-width: 46px;
+  background: var(--accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: #111;
+  flex-shrink: 0;
+}
+
+.lista-diferenciais h3 {
+  font-size: 1rem;
+  color: var(--text-primary);
+  margin-bottom: 5px;
+}
+
+.lista-diferenciais p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+/* ── 14. DEPOIMENTOS ────────────────────────────────────────── */
+.depoimentos {
+  padding: 80px 20px;
+  background-color: var(--section-dark-bg);
+  text-align: center;
+  transition: background-color var(--transition);
+}
+
+.depoimentos .titulo-secao {
+  color: #f0f0f0;
+}
+
+.depoimentos .titulo-secao::after {
+  background: var(--accent);
+}
+
+.depoimentos-slider {
+  position: relative;
+  max-width: 680px;
+  margin: 0 auto;
+  min-height: 220px;
+}
+
+.depoimento {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 40px 32px 32px;
+}
+
+.depoimento.active {
+  opacity: 1;
+  position: relative;
+}
+
+/* Aspas */
+.depoimento .quote-icon {
+  font-size: 32px;
+  color: var(--accent);
+  margin-bottom: 16px;
+  display: block;
+}
+
+/* Estrelas */
+.depoimento .stars {
+  color: var(--accent);
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 14px;
+  display: block;
+}
+
+.depoimento p {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.85);
+  line-height: 1.75;
+  font-style: italic;
+}
+
+.depoimento footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px;
+  font-weight: 600;
+  color: #f0f0f0;
+  font-size: 0.9rem;
+}
+
+.depoimento .avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 8px rgba(255,204,0,0.4);
+}
+
+/* ── 15. CONTATO ────────────────────────────────────────────── */
+.contato {
+  padding: 80px 20px;
+  background-color: var(--bg-secondary);
+  transition: background-color var(--transition);
+}
+
+.contato-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 60px;
+  align-items: start;
+  margin-top: 0;
+}
+
+/* Coluna esquerda — info */
+.contato-info-col h3 {
+  font-size: 1.35rem;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+}
+
+.contato-info-col > p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 28px;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.info-item i {
+  width: 40px;
+  height: 40px;
+  background: var(--accent);
+  color: #111;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.info-item a {
+  color: var(--text-secondary);
+  transition: color var(--transition);
+}
+.info-item a:hover { color: var(--accent); }
+
+.whatsapp-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+  color: #25D366;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: opacity var(--transition);
+}
+.whatsapp-link:hover { opacity: 0.8; }
+.whatsapp-link i { font-size: 1.3rem; }
+
+/* Formulário */
+.form-contato {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-contato label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-contato input,
+.form-contato textarea {
+  padding: 13px 16px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  background: var(--input-bg);
+  border: 1.5px solid var(--input-border);
+  border-radius: 8px;
+  color: var(--text-primary);
+  resize: none;
+  transition: border-color var(--transition), box-shadow var(--transition),
+              background-color var(--transition);
+  width: 100%;
+}
+
+.form-contato input:focus,
+.form-contato textarea:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(255,204,0,0.18);
+  outline: none;
+}
+
+.btn-submit {
+  padding: 14px 32px;
+  background: var(--accent);
+  color: #111;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+  align-self: flex-start;
+}
+
+.btn-submit:hover {
+  background: var(--accent-dark);
+  transform: translateY(-2px);
+}
+
+/* ── 16. RODAPÉ ─────────────────────────────────────────────── */
+.rodape {
+  background-color: var(--footer-bg);
+  color: var(--footer-tx);
+  padding: 56px 20px 24px;
+  transition: background-color var(--transition);
+}
+
+.rodape-conteudo {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1.5fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+}
+
+.rodape-logo p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.rodape-logo .rodape-desc {
+  font-size: 0.85rem;
+  color: var(--footer-tx);
+  line-height: 1.7;
+}
+
+.rodape-links h4,
+.rodape-contato h4 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #555;
+  margin-bottom: 16px;
+}
+
+.rodape-links ul { list-style: none; }
+
+.rodape-links li { margin-bottom: 10px; }
+
+.rodape-links a {
+  font-size: 0.9rem;
+  color: var(--footer-tx);
+  transition: color var(--transition);
+}
+
+.rodape-links a:hover { color: var(--accent); }
+
+.rodape-contato p {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.rodape-contato i { color: var(--accent); }
+
+.rodape-contato a {
+  color: var(--footer-tx);
+  transition: color var(--transition);
+}
+.rodape-contato a:hover { color: var(--accent); }
+
+.rodape-copy {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 0.82rem;
+  color: #444;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding-top: 20px;
+}
+
+/* ── 17. ANIMAÇÕES ──────────────────────────────────────────── */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.07); }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(36px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.reveal.active { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* ── 18. RESPONSIVO — TABLET ────────────────────────────────── */
+@media (max-width: 1024px) {
+  .contato-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .rodape-conteudo {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ── 19. RESPONSIVO — MOBILE (≤ 768px) ─────────────────────── */
+@media (max-width: 768px) {
+
+  /* Header */
+  .header-inner { height: 54px; padding: 0 14px; }
+
+  .nav-desktop { display: none !important; }
+
+  .menu-hamburguer { display: flex !important; }
+
+  .logo img { height: 36px; }
+
+  /* Carrossel */
+  .carousel { height: 240px; }
+
+  .btn-banner {
+    bottom: 32px;
+    font-size: 0.8rem;
+    padding: 9px 18px;
+    border-radius: 6px;
+  }
+
+  .btn-carousel { width: 36px; height: 36px; font-size: 15px; }
+
+  /* Sobre */
+  .sobre { padding: 52px 16px; }
+
+  .sobre-grid { flex-direction: column; gap: 28px; }
+
+  .sobre-img { display: none; } /* oculta imagem decorativa no mobile */
+
+  .sobre-texto h2 { font-size: 1.45rem; }
+
+  .sobre-texto p { font-size: 0.95rem; }
+
+  .titulo-secao { font-size: 1.5rem; margin-bottom: 32px; }
+
+  /* Serviços */
+  .servicos { padding: 52px 16px; }
+
+  .cards-servicos { flex-direction: column; align-items: center; }
+
+  .card-servico { max-width: 100%; }
+
+  /* Diferenciais */
+  .diferenciais-lista { padding: 52px 16px; }
+
+  .lista-diferenciais { grid-template-columns: 1fr; }
+
+  /* Depoimentos */
+  .depoimentos { padding: 52px 16px; }
+
+  .depoimento { padding: 28px 20px 24px; }
+
+  .depoimento p { font-size: 0.9rem; }
+
+  /* Contato */
+  .contato { padding: 52px 16px; }
+
+  .btn-submit { width: 100%; text-align: center; align-self: stretch; }
+
+  /* Rodapé */
+  .rodape { padding: 40px 16px 20px; }
+
+  .rodape-conteudo {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 28px;
+  }
+
+  .rodape-contato p { justify-content: center; }
+}
+
+/* ── 20. ACESSIBILIDADE ─────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
